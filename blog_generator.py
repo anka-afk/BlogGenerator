@@ -1,8 +1,10 @@
 import openai
+from dotenv import dotenv_values
 
+config = dotenv_values(".env")
 client = openai.OpenAI(
     base_url="https://api.gpts.vin/v1",
-    api_key="sk-SqcUluX8QoblMOeIm5ZHtm3MOSZ01B4fBY6WV4yXMiWzrMtY",
+    api_key=config["API_KEY"],
 )
 
 
